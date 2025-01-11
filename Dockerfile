@@ -26,7 +26,7 @@ RUN go build -o go-web-app .
 FROM gcr.io/distroless/base
 
 # Copy the binary from the previous stage
-COPY --from=base /app/main .
+COPY --from=base /app/go-web-app .
 
 # Copy the static files from the previous stage
 COPY --from=base /app/static ./static
